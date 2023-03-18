@@ -1,0 +1,121 @@
+#index2 {
+    @bg1: #5fa4d1;
+    @bg2: #ede7e6;
+    @bg3: #d7d0cc;
+
+    .header {
+        width: 100%;
+        height: 80px;
+        background-color: @bg1;
+        display: flex;
+
+        .button {
+            background-color: #fffdfc;
+            color: #181311;
+            padding: 16px;
+            margin: 16px;
+            cursor: pointer;
+        }
+
+        .button.active {
+            background-color: #6eb03c;
+        }
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+
+        &-header {
+            width: calc(100% - 16px);
+            height: 60px;
+            background-color: @bg2;
+            line-height: 60px;
+            padding-left: 16px;
+
+            .el-button {
+                margin-left: 16px;
+            }
+        }
+
+        &-content {
+            width: 100%;
+            min-height: calc(100vh - 80px - 60px);
+            background-color: @bg3;
+
+            .top {
+                display: flex;
+                flex-wrap: wrap;
+                align-content: flex-start;
+                padding-top: 16px;
+                padding-left: 16px;
+
+                >div {
+                    flex-grow: 1;
+                    padding-bottom: 16px;
+                }
+            }
+
+            .bottom {
+                margin-left: 100px;
+                margin-right: 80px;
+
+                >div {
+                    flex-grow: 1;
+                }
+            }
+
+            .footer {
+                margin-top: 16px;
+
+                >div {
+                    width: calc(50% - 16px);
+                    height: 500px;
+                }
+            }
+
+            table tr>th,
+            td {
+                padding: 12px;
+                text-align: center;
+            }
+        }
+
+        &-content2 {
+            .echarts-box {
+                // width: 25%;
+                flex: 1;
+                margin: 16px;
+            }
+
+            .echarts {
+                width: 100%;
+                height: 400px;
+            }
+
+            .text {
+                color: red;
+                text-align: center;
+                width: 100%;
+                font-size: 18px;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.margin-left-16 {
+    margin-left: 16px;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
